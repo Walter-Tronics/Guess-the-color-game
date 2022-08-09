@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #232222;
+}
+header{
+    text-align: center;
+    background-color: RGB(14, 144, 154);
+    color: white;
+    font-weight: normal;
+    font-family: sans-serif;
+    font-size: 1.8rem;
+}
+#arrow{
+    position: relative;
+    font-size: x-large;
+    animation: move 1s linear alternate infinite;
+}
+@keyframes move {
+    from{top: -5px}
+    to{top: 8px}
+}
+#colorId{
+    font-weight: 800;
+    font-size: 2.5rem;
+}
+#score{
+    color: white;
+    width: 50%;
+    max-width: 80px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.3rem;
+    font-family: sans-serif;
+    border: 3px solid RGB(14, 144, 154);
+    border-top: 0;
+    border-radius: 0 0 15px 15px;
+}
+#container{
+    max-width: 600px;
+    margin: 10px auto;
+}
+.square{
+    background: #429ea7;
+    width: 30%;
+    padding-top: 30%;
+    float: right;
+    margin: 1.6%;
+    border-radius: 15px;
+    transition: background .5s;
+    cursor: pointer;
+}
