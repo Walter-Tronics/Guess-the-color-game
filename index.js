@@ -84,13 +84,32 @@ for (let i = 0; i < squares.length; i++) {
             score++;
             //Update the score in the score display
             $('#score').text(score);
+            
+            //show the correct message
+            $('#correct').css('opacity', '1');
+            //set a timeout to hide the correct message
+            setTimeout ( () => {
+                //hide the correct message
+                $('#correct').css('opacity', '0');
+                //reset the game
+                reset();
+            }, 1000);
         } else {
-            $(this).css('background-color', '#232222');
+            //show the incorrect message
+            $('#wrong').css('opacity', '1');
+            //set a timeout to hide the incorrect message and reset the game
+            setTimeout ( () => {
+                //hide the incorrect message
+                $('#wrong').css('opacity', '0');
+                //reset the game
+                reset();
+            }, 1000);
         }
         console.log(clickedColor);
     });
 }
 
+//Function to reset the game
 function reset() {
     //Generate new colors
     colorVar = storeGeneratedColors();
@@ -109,7 +128,4 @@ function reset() {
 }
 
 
-
-console.log(colorVar); 
-console.log(pickedColor);
 });
