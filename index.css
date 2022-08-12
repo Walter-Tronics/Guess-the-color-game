@@ -44,7 +44,7 @@ header{
 }
 @media screen and (max-width: 400px){
     #container{
-        margin: 50px auto;
+        margin: 70px auto;
     }
 }
 .square{
@@ -83,6 +83,7 @@ header{
     display: none;
     justify-content: center;
     align-items: center;
+    z-index: 10;
 }
 #alertBox{
     width: 80%;
