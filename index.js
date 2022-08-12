@@ -19,7 +19,7 @@ function displayCont(){
     
     //Animate the alert box
     gsap.from("#alertBox", 
-    
+
     //Animation properties
     {duration: 1.5, 
         scale: 0, 
@@ -65,6 +65,7 @@ function changeColor(color) {
     }
 }
 
+
 //Function to pick a random color from the array
 function pickColor() {
 
@@ -100,6 +101,8 @@ function storeGeneratedColors() {
     //Return the array
     return colorArr;
 }
+
+
 
 //The game logic
 for (let i = 0; i < squares.length; i++) {
