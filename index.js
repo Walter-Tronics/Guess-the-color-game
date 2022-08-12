@@ -1,4 +1,42 @@
+
 $(function() {
+
+//Create a new audio object
+var audio = new Audio('/Instrumental.mp3');
+
+
+//Calling the display alert container function
+displayCont();
+
+//Function to show the alert box
+function displayCont(){
+
+    //Show the alert Container
+    $('#alertCont').css('display','flex');
+    
+    //Show the alert box
+    $('#alertBox').show();
+    
+    //Animate the alert box
+    gsap.from("#alertBox", 
+    
+    //Animation properties
+    {duration: 1.5, 
+        scale: 0, 
+        delay: 1, 
+        opacity: .5, 
+        ease: "back"});
+}
+
+//Function to hide the alert box
+$('#closeAlert').on('click', ()=>{
+
+    //Hide the alert box
+    $('#alertCont').delay(500).fadeOut();
+
+    //Play the audio
+    audio.play();
+});
 
 //Selecting the elements and inintializing variables
 let squaresCount = 6,
@@ -65,11 +103,13 @@ function storeGeneratedColors() {
 
 //The game logic
 for (let i = 0; i < squares.length; i++) {
+    
     //Add the stored colors to the squares
     squares[i].style.background = colorVar[i];
 
     //Add event listeners to the squares
     squares[i].addEventListener("click", function() {
+
         //Get the color of the clicked square
         let clickedColor = this.style.background;
         //Check if the clicked color is equal to the picked color
@@ -95,6 +135,7 @@ for (let i = 0; i < squares.length; i++) {
                 reset();
             }, 1000);
         } else {
+
             //show the incorrect message
             $('#wrong').css('opacity', '1');
             //set a timeout to hide the incorrect message and reset the game
@@ -109,14 +150,19 @@ for (let i = 0; i < squares.length; i++) {
     });
 }
 
+
 //Function to reset the game
 function reset() {
+
     //Generate new colors
     colorVar = storeGeneratedColors();
+
     //Pick a new random color from the array
     pickedColor = pickColor();
+
     //Change the colorDisplay to match the picked color
     $('#colorId').text((pickedColor).toUpperCase());
+
     //Change the color of the squares randomly again
     for (let i = 0; i < squares.length; i++) {
         squares[i].style.background = colorVar[i];
