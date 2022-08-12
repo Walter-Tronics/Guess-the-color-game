@@ -20,8 +20,7 @@ header{
     animation: move 1s linear alternate infinite;
 }
 @keyframes move {
-    from{top: -5px}
-    to{top: 8px}
+    from{top: -5px} to{top: 8px}
 }
 #colorId{
     font-weight: 800;
@@ -42,6 +41,11 @@ header{
 #container{
     max-width: 600px;
     margin: 10px auto;
+}
+@media screen and (max-width: 400px){
+    #container{
+        margin: 50px auto;
+    }
 }
 .square{
     background: #429ea7;
@@ -68,4 +72,36 @@ header{
 }
 #wrong{
     background: #f44336;
+}
+#alertCont{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    left: 0;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+#alertBox{
+    width: 80%;
+    background: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.5rem;
+    color: #000;
+    display: none;
+}
+#closeAlert{
+    width: 100%;
+    background: RGB(14, 144, 154);
+    border-radius: 5px;
+    padding: 5px;
+    border: 0;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.5rem;
 }
