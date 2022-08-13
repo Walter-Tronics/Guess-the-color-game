@@ -41,7 +41,7 @@ header{
     margin: 10px auto;
 }
 @media screen and (max-width: 400px){
-    #container{margin: 70px auto;}
+    #container{margin: 70px auto;}   #colorId{font-size: 2rem;}
 }
 .square{
     background: #429ea7;
