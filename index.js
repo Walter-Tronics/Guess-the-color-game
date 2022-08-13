@@ -36,6 +36,8 @@ $('#closeAlert').on('click', ()=>{
 
     //Play the audio
     audio.play();
+    //loop the audio
+    audio.loop = true;
 });
 
 //Selecting the elements and inintializing variables
