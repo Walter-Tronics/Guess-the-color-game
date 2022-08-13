@@ -149,7 +149,7 @@ for (let i = 0; i < squares.length; i++) {
                 reset();
             }, 1000);
         }
-        console.log(clickedColor);
+        
     });
 }
 
