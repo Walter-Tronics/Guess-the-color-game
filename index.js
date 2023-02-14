@@ -121,8 +121,9 @@ for (let i = 0; i < squares.length; i++) {
         if (clickedColor === pickedColor) {
             //Change the background color of the header to the picked color
             $('header').css('background', clickedColor);
-            //Change the border color of the score container to the picked color
-            $('#score').css('borderColor', clickedColor);
+            //Change the border color of the score container and the text color to the picked color
+            $('#score').css({'borderColor': clickedColor, 'color': clickedColor});
+
             //Change the background color of all the squares to the picked color
             changeColor(pickedColor);
             //increment the score by 1
@@ -174,8 +175,9 @@ function reset() {
     }
     //Change the header background color to the default color
     $('header').css('background-color', 'RGB(14, 144, 154)');
-    //Change the border color of the score container to the default color
-    $('#score').css('borderColor', 'RGB(14, 144, 154)');
+    //Change the border color of the score container and the text color to the default color
+    $('#score').css({'borderColor':'RGB(14, 144, 154)', 'color':'#429ea7'});
+
 }
 
 
