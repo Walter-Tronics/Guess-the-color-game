@@ -6,7 +6,7 @@
     color: white;
 }
 body{
-    background-color: #232222;
+    background-color: #fff;
 }
 header{
     background-color: RGB(14, 144, 154);
@@ -27,11 +27,12 @@ header{
     font-size: 2.5rem;
 }
 #score{
-    width: 50%;
-    max-width: 80px;
+    width: min(50%, 80px);
+    color: #429ea7;
+    font-weight: bold;
     margin: 0 auto;
     font-size: 1.3rem;
-    font-family: sans-serif;
+    font-family: serif;
     border: 3px solid RGB(14, 144, 154);
     border-top: 0;
     border-radius: 0 0 15px 15px;
