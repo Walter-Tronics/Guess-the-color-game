@@ -1,5 +1,5 @@
 # Guess-the-color-game
-## Color guessing game with JavaScript
+## Color guessing game made with JavaScript. Test your RGB color value capability
 ### Languages: 
 * HTML
 * CSS
