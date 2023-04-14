@@ -84,8 +84,8 @@ function randomColor() {
     let r = Math.floor(Math.random() * 256);
     let g = Math.floor(Math.random() * 256);
     let b = Math.floor(Math.random() * 256);
-    //Use rgb values to form a color
-    return `rgb( ${r}, ${g}, ${b} )`;
+    //concatinating the rgb values to form a color
+    return "rgb(" + r + ", " + g + ", " + b + ")";
 }
 
 
